@@ -1,7 +1,31 @@
 #RPG
 
+
+
+
 puts "What is your name?"
 
-	hero = gets.chomp.capitalize!
+	hero = {"name": "", "health_points": 10}
 
-puts "#{name} enters the forest!"
+	hero[:name] = gets.chomp.capitalize!
+
+puts "#{hero[:name]} enters the forest!"
+
+puts "Hi #{hero[:name]}! Prepare for battle!"
+
+puts "... will #{hero[:name]} fight or flee?"
+
+
+def fight 
+
+
+
+end
+
+def flee
+
+
+
+end
+
+
