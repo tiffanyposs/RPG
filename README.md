@@ -1,26 +1,60 @@
-Basic Game Mechanics
+#Basic Game Mechanics
 
 These are the minimum requirements for this app.
 
 Before the game starts, ask the user for their name (e.g. Victanda Urthadar)
+
 The hero starts out with 10 hp, or health points.
+
 First the hero is confronted with a baddie (you choose what types of baddies). They can choose to fight or run away.
+
+		fight_flee
+
 If the user chooses to run away, their hero loses 2 hp.
+
+		flee = -2hp
+		
 If the user chooses to fight then they enter a battle round, where the hero and the baddie alternate attacks
+
 The hero always gets to make the first attack
+		
+		hero attacks first
+		
 Whenever a hero attacks, they have a 20% chance of completely missing and not hitting their opponent.
-If the attack misses nothing happens
-If the attack lands, the baddie loses 2-4 health points
-Whenever a baddie attacks, it has a 40% chance of missing
-If the attack misses nothing happens
-If the attack lands, the hero loses 1-3 health points
-After every attack, you can optionally print out the health points of the hero and/or the baddie
-If the hero dies announce this fact and end the game
-If the baddie dies:
-restore all of the hero's health points
-award them with 1 more maximum health point
-confront the hero with another baddie
-Advanced Game Mechanics
+
+		hero attacks with 20% miss chance
+		
+	If the attack misses nothing happens
+
+	If the attack lands, the baddie loses 2-4 health points
+		
+Whenever a 
+		
+		baddie attacks, 
+			it has a 40% chance of missing
+
+		If the attack misses nothing happens
+		If the attack lands, the hero loses 1-3 health points
+
+
+After every attack, you can optionally 
+
+		print out the health points of the hero and/or the baddie
+
+
+		If the hero dies announce this fact and end the game
+
+
+	If the baddie dies:
+		restore all of the hero's health points
+
+		award them with 1 more maximum health point
+
+
+		confront the hero with another baddie
+
+
+##Advanced Game Mechanics
 
 These mechanics are a lot more involved. See how far you can get in implementing them.
 
