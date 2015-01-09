@@ -5,7 +5,7 @@
 
 puts "What is your name?"
 
-	hero = {"name": "", "health_points": 10}
+	hero = {"name"=> "", "health_points"=> 10}
 
 	hero[:name] = gets.chomp.capitalize!
 
@@ -15,7 +15,7 @@ puts "Hi #{hero[:name]}! Prepare for battle!"
 
 puts "... will #{hero[:name]} fight or flee?"
 
-fight_flee = gets.chomp.lowercase
+fight_flee = gets.chomp.downcase
 
 def fight
 
@@ -32,12 +32,13 @@ end
 question = true
 
 while question
-if fight_flee == "y" || fight_flee == "yes"
-	fight()
-	question = false
-elsif fight_flee == "n" || fight_flee == "no"
-	flee()
-	question = false
-else
-	puts "Type yes or no"
+	if fight_flee == "fight"
+		fight()
+		question = false
+	elsif fight_flee == "flee"
+		flee()
+		question = false
+	else
+		puts "Type fight or flee"
+	end
 end
