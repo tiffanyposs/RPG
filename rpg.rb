@@ -1,13 +1,3 @@
-#make the array of characters into objects with predetermined sayings
-
-#fix grammar errors for vowels "an" and "a" etc
-
-#make it choose randomly if you will bump into a bad guy or maybe
-#another obstical like a mountain or a lake or
-
-#add a round counter
-
-
 intro = ["Welcome the the Game!",
 "The object of the game is to get through the forest.",
 "You need fight bad guys to get through to forest!",
@@ -131,14 +121,12 @@ end #end flee
 ############
 ### initiates a battle with the 
 def battle(player)
-
   adjectives = ["Uncanny", "Crawly", "Mysterious", "Shadowy", "Beastly", "Grim", "Unholy",
   "Horrid", "Hideous"]
 
    bad_guys = ["Cockatrice", "Count Dracula", "Doppelganger", "Echidna", "Elf", "Dragon", 
   "Demon", "Cyclops", "Ghost", "Grim Reaper", "Manticore", "Mutants", "New Jersey Devil", 
   "Pegasus", "Sasquatch", "Satyr", "Siren", "Vampire", "Zombie", "Sea-Goat"]
-
 
   flee_points = rand(2..4)
   flee_miles = rand(10..25)
@@ -153,27 +141,22 @@ round = true
   while round == true
     puts "Would you like to fight #{baddie.name}? or flee for #{flee_points} hit points and #{flee_miles} miles from you journey?"
     fight_flee = gets.chomp
-  if fight_flee.downcase == "fight"
-    # while baddie.hit_points > 0 && player.hit_points > 0
-    #   puts fight(baddie, player)
-    #   round = false
-    # end
-    puts fight(baddie,player)
-    round = false
-  elsif fight_flee.downcase == "flee" 
-      if player.hit_points <= flee_points
-        puts "You don't have enough hit points to flee, you must fight."
-      elsif player.miles + flee_miles > 100
-        puts "You cannot flee, you're too close to home, you must fight."
-      else #player.hit_points >= flee_points+1
-        puts flee(baddie, player, flee_points, flee_miles)
-        round = false
-      end
-  else
-    puts "that not an answer"
-  end # end main if
-    end #end while
-
+    if fight_flee.downcase == "fight"
+      puts fight(baddie,player)
+      round = false
+    elsif fight_flee.downcase == "flee" 
+        if player.hit_points <= flee_points
+          puts "You don't have enough hit points to flee, you must fight."
+        elsif player.miles + flee_miles > 100
+          puts "You cannot flee, you're too close to home, you must fight."
+        else #player.hit_points >= flee_points+1
+          puts flee(baddie, player, flee_points, flee_miles)
+          round = false
+        end
+    else
+      puts "that not an answer"
+    end # end main if
+  end #end while
 end #end battle method
 
 
